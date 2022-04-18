@@ -80,6 +80,7 @@ a {
 .heading {
   font-size: 3rem;
   font-weight: 400;
+  text-align: center;
 }
 
 #form {
@@ -119,15 +120,25 @@ a {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   padding: 0 5rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .feature {
   display: grid;
   grid-template-columns: 1fr 4fr;
   row-gap: 3rem;
+  column-gap: 1.5rem;
   align-items: center;
+  width: 100%;
 }
 
 .icon {
@@ -140,12 +151,6 @@ a {
 .title {
   font-size: 2.4rem;
   font-weight: 400;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 /** How it Works **/
@@ -165,7 +170,8 @@ a {
 }
 
 #video {
-  max-width: 560rem;
+  width: 56rem;
+  height: 31rem;
 }
 
 /** pricing **/
@@ -236,7 +242,7 @@ a {
   display: grid;
   grid-template-columns: 3fr 2fr;
   align-items: center;
-  height: 8rem;
+  height: 10rem;
   padding: 0 5rem;
   background-color: var(--color-gray);
   margin: 10rem 5rem 0 5rem;
@@ -289,5 +295,68 @@ a {
   .footer-nav {
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (max-width: 56em) {
+  html {
+    font-size: 56.5%;
+  }
+
+  #header {
+    justify-content: right;
+  }
+
+  .container {
+    width: 56rem;
+  }
+
+  .main {
+    margin-top: 15rem;
+    padding: 0;
+  }
+
+  .features {
+    row-gap: 7rem;
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    align-self: center;
+  }
+
+  .how-it-works {
+    padding: 0 5rem;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  #video {
+    width: 46rem;
+    height: 24rem;
+  }
+
+  .footer {
+    width: 100%;
+    padding: 3rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 36em) {
+  .container {
+    width: 36rem;
+  }
+
+  #video {
+    width: 36rem;
+    height: 26rem;
+  }
+
+  .plans {
+    width: 32rem;
   }
 }
