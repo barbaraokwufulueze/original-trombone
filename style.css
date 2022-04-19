@@ -14,6 +14,7 @@
 html {
   font-size: 62.5%; /* Percentage of user's font-size setting */
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -251,8 +252,8 @@ a {
 /*********************/
 /* Media Queries */
 /*********************/
-
-@media (max-width: 76em) {
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
   #header {
     padding: 2rem;
   }
@@ -266,7 +267,7 @@ a {
   }
 
   .container {
-    width: 76rem;
+    width: 74rem;
   }
 
   .plans {
@@ -298,6 +299,7 @@ a {
   }
 }
 
+/* 896px / 16px = 56em */
 @media (max-width: 56em) {
   html {
     font-size: 56.5%;
@@ -346,6 +348,7 @@ a {
   }
 }
 
+/* 576px / 16px = 36em */
 @media (max-width: 36em) {
   .container {
     width: 36rem;
